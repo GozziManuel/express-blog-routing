@@ -68,11 +68,20 @@ router.get("/posts/:id", (req, res) => {
   });
 });
 
-//Store
+// Store
 router.post("/posts", (req, res) => {
   res.json({
     result: `Post Creato con successo`,
     success: true,
+  });
+});
+
+// Update
+router.put("/posts/:id", (req, res) => {
+  const postId = req.params.id;
+  res.json({
+    Post_Number: postId,
+    description: `you are modifying post number ${postId}`,
   });
 });
 

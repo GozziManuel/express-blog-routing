@@ -85,4 +85,12 @@ router.put("/posts/:id", (req, res) => {
   });
 });
 
+// Modify
+router.patch("/posts/:id", (req, res) => {
+  const postId = req.params.id;
+  res.json({
+    Post_Number: postId,
+    description: `you are modifying partially post number ${postId}`,
+  });
+});
 module.exports = router;

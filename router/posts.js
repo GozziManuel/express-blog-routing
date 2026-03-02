@@ -93,4 +93,14 @@ router.patch("/posts/:id", (req, res) => {
     description: `you are modifying partially post number ${postId}`,
   });
 });
+
+// Destroy
+router.delete("/posts/:id", (req, res) => {
+  const postId = req.params.id;
+  res.json({
+    Post_Number: postId,
+    description: `you are eliminating post number ${postId}`,
+  });
+});
+
 module.exports = router;

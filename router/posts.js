@@ -58,6 +58,8 @@ router.get("/posts", (req, res) => {
     result: posts,
   });
 });
+
+// Show
 router.get("/posts/:id", (req, res) => {
   const postId = req.params.id;
   res.json({
@@ -65,4 +67,13 @@ router.get("/posts/:id", (req, res) => {
     description: `you are looking at post number ${postId}`,
   });
 });
+
+//Store
+router.post("/posts", (req, res) => {
+  res.json({
+    result: `Post Creato con successo`,
+    success: true,
+  });
+});
+
 module.exports = router;

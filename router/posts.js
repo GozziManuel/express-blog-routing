@@ -58,5 +58,11 @@ router.get("/posts", (req, res) => {
     result: posts,
   });
 });
-
+router.get("/posts/:id", (req, res) => {
+  const postId = req.params.id;
+  res.json({
+    Post_Number: postId,
+    description: `you are looking at post number ${postId}`,
+  });
+});
 module.exports = router;
